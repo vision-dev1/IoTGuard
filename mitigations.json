@@ -1,0 +1,143 @@
+{
+    "mitigations": {
+        "TELNET_EXPOSED": {
+            "title": "Telnet Service Exposed",
+            "risk_level": "HIGH",
+            "description": "Telnet service is running without encryption, transmitting credentials and data in plaintext.",
+            "danger": "Attackers can intercept credentials and gain unauthorized access to the device.",
+            "mitigation_steps": [
+                "Disable Telnet service immediately",
+                "Enable SSH service as secure alternative",
+                "Configure strong authentication for SSH",
+                "Implement network segmentation to isolate IoT devices",
+                "Monitor for unauthorized access attempts"
+            ],
+            "references": [
+                "NIST SP 800-53: AC-17 Remote Access",
+                "CIS Controls v8: Control 4 - Account Management"
+            ]
+        },
+        "HTTP_INSECURE": {
+            "title": "Insecure HTTP Service",
+            "risk_level": "MEDIUM",
+            "description": "Web interface accessible via unencrypted HTTP protocol.",
+            "danger": "Credentials and sensitive data transmitted in plaintext can be intercepted.",
+            "mitigation_steps": [
+                "Configure HTTPS with valid SSL/TLS certificates",
+                "Redirect all HTTP traffic to HTTPS",
+                "Disable plain HTTP access if not required",
+                "Implement certificate pinning",
+                "Regularly update SSL/TLS configurations"
+            ],
+            "references": [
+                "OWASP Transport Layer Protection Cheat Sheet",
+                "Mozilla SSL Configuration Generator"
+            ]
+        },
+        "CAMERA_RTSP_OPEN": {
+            "title": "Unsecured Camera RTSP Stream",
+            "risk_level": "HIGH",
+            "description": "RTSP streaming service is accessible without authentication.",
+            "danger": "Unauthorized users can view camera feeds and potentially control the device.",
+            "mitigation_steps": [
+                "Enable strong authentication for RTSP streams",
+                "Change default credentials immediately",
+                "Restrict RTSP access to specific IP ranges",
+                "Implement network segmentation",
+                "Consider disabling RTSP if not essential",
+                "Regular firmware updates"
+            ],
+            "references": [
+                "ONVIF Security Whitepaper",
+                "Camera security best practices"
+            ]
+        },
+        "MQTT_NO_AUTH": {
+            "title": "MQTT Broker Without Authentication",
+            "risk_level": "HIGH",
+            "description": "MQTT messaging service allows anonymous connections.",
+            "danger": "Anyone can publish/subscribe to topics, potentially controlling devices or stealing data.",
+            "mitigation_steps": [
+                "Enable MQTT authentication with strong passwords",
+                "Implement client certificate authentication",
+                "Restrict broker access to trusted networks",
+                "Use MQTT over TLS (mqtts)",
+                "Monitor for unauthorized client connections",
+                "Implement proper topic access controls"
+            ],
+            "references": [
+                "MQTT Security Fundamentals",
+                "Eclipse Mosquitto Security Documentation"
+            ]
+        },
+        "UPNP_ENABLED": {
+            "title": "UPnP Enabled on Device",
+            "risk_level": "MEDIUM",
+            "description": "Universal Plug and Play protocol is active, allowing automatic port forwarding.",
+            "danger": "Can expose internal services to the internet without user knowledge.",
+            "mitigation_steps": [
+                "Disable UPnP in device settings",
+                "Manually configure port forwarding when needed",
+                "Implement strict firewall rules",
+                "Regular network monitoring for unexpected port mappings",
+                "Network segmentation of IoT devices"
+            ],
+            "references": [
+                "US-CERT Alert on UPnP Vulnerabilities",
+                "Router security best practices"
+            ]
+        },
+        "OUTDATED_FIRMWARE": {
+            "title": "Outdated Firmware Detected",
+            "risk_level": "MEDIUM",
+            "description": "Device is running older firmware version with known vulnerabilities.",
+            "danger": "Known security flaws may allow exploitation or compromise.",
+            "mitigation_steps": [
+                "Check manufacturer website for latest firmware",
+                "Download and install firmware updates immediately",
+                "Enable automatic update checking if available",
+                "Test updates in non-production environment first",
+                "Maintain inventory of device firmware versions"
+            ],
+            "references": [
+                "CVE database for device-specific vulnerabilities",
+                "Manufacturer security advisories"
+            ]
+        },
+        "WEAK_SSH_CONFIG": {
+            "title": "Weak SSH Configuration",
+            "risk_level": "MEDIUM",
+            "description": "SSH service configured with weak security settings.",
+            "danger": "Vulnerable to brute force attacks and unauthorized access.",
+            "mitigation_steps": [
+                "Disable password authentication, use key-based auth",
+                "Change default SSH port from 22",
+                "Implement fail2ban or similar intrusion prevention",
+                "Restrict SSH access to specific IP addresses",
+                "Disable root login via SSH",
+                "Use strong SSH key pairs (4096+ bits)"
+            ],
+            "references": [
+                "SSH Hardening Guide",
+                "CIS SSH Benchmark"
+            ]
+        },
+        "DEFAULT_CREDENTIALS": {
+            "title": "Default Credentials Detected",
+            "risk_level": "HIGH",
+            "description": "Service appears to be using manufacturer default login credentials.",
+            "danger": "Well-known default passwords make unauthorized access trivial.",
+            "mitigation_steps": [
+                "Change all default usernames and passwords immediately",
+                "Use strong, unique passwords for each device",
+                "Implement password policies (length, complexity, expiration)",
+                "Consider password managers for credential storage",
+                "Disable unused accounts and services"
+            ],
+            "references": [
+                "DefaultCreds-cheat-sheet",
+                "NIST Password Guidelines"
+            ]
+        }
+    }
+}

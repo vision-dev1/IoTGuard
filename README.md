@@ -216,13 +216,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 [Portfolio](https://visionkc.com.np)
 - Project: IoTGuard - Defensive IoT Security Assessment Tool
 
-## Acknowledgments
-
-- Built with Flask and Python
-- UI powered by TailwindCSS
-- Icons from Material Symbols
-- Network scanning via Nmap
-
 ## Disclaimer
 
 This tool is provided "as is" without warranty of any kind. The authors are not responsible for any misuse or damage caused by this tool. Use responsibly and ethically.

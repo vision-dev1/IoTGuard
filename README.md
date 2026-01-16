@@ -16,7 +16,7 @@
 ## Technology Stack
 
 - **Backend**: Flask (Python)
-- **Frontend**: HTML5, TailwindCSS, Material Symbols Icons
+- **Frontend**: HTML, TailwindCSS, Material Symbols Icons
 - **Scanner**: Nmap integration
 - **Data Format**: JSON
 

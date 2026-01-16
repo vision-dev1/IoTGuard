@@ -223,7 +223,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Author
 
 **Vision**
-- GitHub: [@vision-dev1](https://github.com/vision-dev1)
+[Github](https://github.com/vision-dev1)
+[Portfolio](https://visionkc.com.np)
 - Project: IoTGuard - Defensive IoT Security Assessment Tool
 
 ## Acknowledgments

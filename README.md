@@ -13,17 +13,6 @@
 - 🎨 **Modern UI**: Clean, responsive interface with dark mode support
 - 🔒 **Defensive Focus**: Designed strictly for authorized security assessments
 
-## Screenshots
-
-### Scan Configuration
-Modern interface for configuring network scans with CIDR notation support.
-
-### Results Dashboard
-Comprehensive dashboard showing discovered devices with risk-based color coding.
-
-### Device Details
-Detailed security profile for each device including open ports, services, and mitigation steps.
-
 ## Technology Stack
 
 - **Backend**: Flask (Python)

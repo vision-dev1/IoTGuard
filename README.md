@@ -216,8 +216,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Github](https://github.com/vision-dev1)
 [Portfolio](https://visionkc.com.np)
 
-## Disclaimer
-
-This tool is provided "as is" without warranty of any kind. The authors are not responsible for any misuse or damage caused by this tool. Use responsibly and ethically.
-
 ---

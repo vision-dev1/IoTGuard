@@ -1,8 +1,11 @@
+<div align="center">
 # IoTGuard
 
 **IoTGuard** is a defensive IoT security assessment tool designed to help security professionals identify and mitigate vulnerabilities in IoT devices across enterprise networks.
 
 ![IoTGuard Interface](https://img.shields.io/badge/Framework-Flask-blue) ![Python](https://img.shields.io/badge/Python-3.8+-green) ![License](https://img.shields.io/badge/License-MIT-yellow)
+
+</div>
 
 ## Features
 
